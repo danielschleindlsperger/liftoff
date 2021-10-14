@@ -1,0 +1,36 @@
+{:deps    {org.clojure/clojure                 {:mvn/version "1.10.3"}
+
+           ;; logging
+           ;; com.taoensso/timbre                 {:mvn/version "5.1.2"}
+           ;; com.fzakaria/slf4j-timbre           {:mvn/version "0.3.21"}
+
+           ;; HTTP
+           ;; http-kit/http-kit                   {:mvn/version "2.5.3"}
+           metosin/reitit                      {:mvn/version "0.5.15"}
+           ;; ring/ring-core                      {:mvn/version "1.9.2"}
+           ;; ring/ring-headers                   {:mvn/version "0.3.0"}
+           ;; ring/ring-defaults                  {:mvn/version "0.3.3"}
+           ;; martian/martian                     {:mvn/version "0.1.16"}
+
+           ;; JSON
+           metosin/jsonista                    {:mvn/version "0.3.4"}
+           camel-snake-kebab/camel-snake-kebab {:mvn/version "0.4.2"}
+           ;; JSON Schema support functions
+           jinx/jinx                           {:git/url "https://github.com/juxt/jinx.git"
+                                                :sha     "68325edd1c4d5884d78e11f2a31d871a8512893d"}
+
+           ;; validation/modelling
+           ;; metosin/malli                       {:mvn/version "0.4.0"}
+
+           ;; testing
+           ;; utility for generative testing
+           ;; com.gfredericks/test.chuck          {:mvn/version "0.2.10"}
+
+           }
+ :paths   ["src" "resources"]
+ :aliases {:dev  {:extra-paths ["dev/src" "dev/resources" "test"]}
+           :test {:extra-paths ["test"]
+                  :extra-deps  {lambdaisland/kaocha           {:mvn/version "1.0.861"}
+                                lambdaisland/kaocha-cloverage {:mvn/version "1.0.75"}
+                                org.clojure/test.check        {:mvn/version "1.1.0"}
+                                ring/ring-mock                {:mvn/version "0.4.0"}}}}}
