@@ -56,8 +56,6 @@
         ;; validate response?
         resp))))
 
-(get-in foo [:reitit.core/match :data])
-
 (defn ->ring
   "Generate a ready-to-use Ring compatible handler function from a liftoff schema."
   [liftoff-schema]
@@ -108,7 +106,3 @@
   (time (app {:request-method :get :uri "/pet/asdf3"}))
   (time (app {:request-method :delete :uri "/pet/123"}))
   )
-
-
-(get-in foo [:path-params])
-valid?
