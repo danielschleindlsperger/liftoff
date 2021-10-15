@@ -1,0 +1,5 @@
+{:binding {:justify? true},
+ :map {:comma? false, :justify? true, :sort? false},
+ :pair {:justify? true},
+ :style :community,
+ :width 120}
